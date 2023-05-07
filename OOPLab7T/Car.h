@@ -30,6 +30,10 @@ public:
 		cout << "State: " << state << endl;
 		cout << "====================" << endl;
 	}
+	friend ostream& operator<<(ostream& out, Car& c) {
+		out << c.id << " " << c.marka << " " << c.number_of_seats << " " << c.state;
+		return out;
+	}
 	string getState() {
 		return this->state;
 	}

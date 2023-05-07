@@ -53,6 +53,10 @@ public:
 		cout << "Zayavka: " << zayavka << endl;
 		cout << "====================" << endl;
 	}
+	friend ostream& operator<<(ostream& out, Driver& d) {
+		out << d.id << " " << d.car_id << " " << d.firstName << " " << d.lastName << " " << d.age << " " << d.drives_count << " " << d.rate << " " << d.state << " " << d.zayavka;
+		return out;
+	}
 	int getId() {
 		return this->id;
 	}
@@ -61,6 +65,9 @@ public:
 	}
 	void setCarId(int car_id) {
 		this->car_id = car_id;
+	}
+	int getCarId() {
+		return this->car_id;
 	}
 	void setState(string state) {
 		this->state = state;

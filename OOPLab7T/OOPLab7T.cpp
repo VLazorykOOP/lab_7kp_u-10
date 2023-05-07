@@ -8,7 +8,7 @@
 using namespace std;
 
 void Dispetcher_t();
-
+void Driver_t();
 int main()
 {
     char ch = '4';
@@ -23,6 +23,10 @@ int main()
         switch (ch) {
         case '1': {
             Dispetcher_t();
+            break;
+        }
+        case '2': {
+            Driver_t();
             break;
         }
         case '3': return 0;
@@ -66,3 +70,34 @@ void Dispetcher_t()
     } while (ch != '3');
 }
 
+void Driver_t() {
+    Dispetcher d;
+    d.readCarFromFile();
+    d.readDriverFromFile();
+    d.readTourFromFile();
+    char ch = '3';
+    do {
+        cout << "Choose option :" << endl;
+        cout << "1. Set Poznacka." << endl;
+        cout << "2. Remont zayava." << endl;
+        cout << "3. Forward to Main Menu." << endl;
+        cout << " >>> ";
+        ch = cin.get();
+        cin.get();
+        switch (ch) {
+        case '1': {
+            d.setPoznachka();
+            break;
+        }
+        case '2': {
+            d.remontZayava();
+            break;
+        }
+        case '3':
+        {
+            main();
+        }
+        }
+        ch = cin.get();
+    } while (ch != '3');
+}

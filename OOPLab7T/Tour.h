@@ -38,6 +38,10 @@ public:
 		cout << "State: " << state << endl;
 		cout << "====================" << endl;
 	}
+	friend ostream& operator<<(ostream& out, Tour& t) {
+		out << t.id << " " << t.driver_id << " " << t.tour_name << " " << t.departure_time << " " << t.arrival_time << " " << t.state;
+		return out;
+	}
 	int getId() {
 		return this->id;
 	}
