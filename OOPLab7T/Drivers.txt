@@ -1,0 +1,4 @@
+Vasya Enakii 30 8500 3.8 GOTOV N
+Mykola Rysnak 43 10000 4.3 GOTOV N
+Yaroslav Drin 18 2800 5.0 GOTOV N
+Maksim Kotsut 31 29999 5.0 GOTOV N
