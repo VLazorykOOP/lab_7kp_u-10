@@ -7,5 +7,6 @@ int main()
     std::cout << "Лабораторна робота №7  \n";
     std::cout << "Автоматизована система ...  \n";
     std::cout << "Hello World!";
+    std::cout << "Hello Sasha";
 }
 
