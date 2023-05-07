@@ -91,6 +91,7 @@ public:
 			bool f1 = false;
 			for (Car temp : car) {
 				if (temp.getState() == "GOTOVO") {
+					temp.setState("BUSY");
 					f1 = true;
 					break;
 				}
@@ -103,21 +104,8 @@ public:
 			}
 		}
 		cout << "Choose Driver (id): ";
-		while (cin >> driver_id) {
-			bool f1 = false;
-			for (Driver temp : driver) {
-				if (temp.getState() == "GOTOV") {
-					f1 = true;
-					break;
-				}
-				else {
-					continue;
-				}
-			}
-			if (f1) {
-				break;
-			}
-		}
+		driver_id = checkDriver("GOTOV");
+
 		cout << "Choose Tour (id): ";
 		while (cin >> tour_id) {
 			bool f1 = false;
@@ -134,5 +122,58 @@ public:
 				break;
 			}
 		}
+		for (Driver temp : driver) {
+			if (temp.getId() == driver_id)
+			{
+				temp.setCarId(car_id);
+				temp.setState("BUSY");
+				temp.showDriver();
+			}
+		}
+		for (Tour temp : tour) {
+			if (temp.getId() == tour_id)
+			{
+				temp.setDriverId(driver_id);
+				temp.setState("B");
+				temp.showTour();
+			}
+		}
+
+	}
+	void cancel_driver(){
+		int driver_id;
+		cout << "Choose cancelled driver: ";
+		cin >> driver_id;
+		for (Driver temp : driver )
+		{
+			if (temp.getId() == driver_id)
+			{
+				temp.setState("CANCELLED");
+			}
+		}
+	}
+	int checkDriver(string state){
+		int driver_id;
+		while (cin >> driver_id) {
+			bool f1 = false;
+			for (Driver temp : driver) {
+				if (temp.getState() == state) {
+					f1 = true;
+					break;
+				}
+				else {
+					continue;
+				}
+			}
+			if (f1) {
+				break;
+			}
+		}
+		return driver_id;
+	}
+	void setPoznachka(){
+		cout << "Choose your driver:";
+		int driver_id;
+		driver_id = checkDriver("BUSY");
 	}
 };
