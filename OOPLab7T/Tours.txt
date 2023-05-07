@@ -1,5 +1,5 @@
-Kyiv-Lviv 9:00 18:00
-Lviv-Odessa 18:00 6:00
-Kyiv-Lviv 8:00 11:00
-IvanoFrankivsk-Chernivtsi 6:30 8:20
-Vinnytsa-Lviv 16:00 23:00
+1 0 Kyiv-Lviv 9:00 18:00 NEB
+2 0 Lviv-Odessa 18:00 6:00 NEB
+3 0 Kyiv-Lviv 8:00 11:00 NEB
+4 0 IvanoFrankivsk-Chernivtsi 6:30 8:20 NEB
+5 0 Vinnytsa-Lviv 16:00 23:00 NEB

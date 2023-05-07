@@ -23,6 +23,7 @@ int main()
             d.readCarFromFile();
             d.readDriverFromFile();
             d.readTourFromFile();
+            d.setCarToDriverToTour();
             break;
         }
         case '3': return 0;

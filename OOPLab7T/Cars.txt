@@ -1,5 +1,5 @@
-BMW 16 GOTOVO
-MersedesBenz 24 GOTOVO
-MersedesVito 18 GOTOVO
-BusBogdan 28 GOTOVO
-Reno 17 GOTOVO
+1 BMW 16 GOTOVO
+2 MersedesBenz 24 GOTOVO
+3 MersedesVito 18 GOTOVO
+4 BusBogdan 28 GOTOVO
+5 Reno 17 GOTOVO
